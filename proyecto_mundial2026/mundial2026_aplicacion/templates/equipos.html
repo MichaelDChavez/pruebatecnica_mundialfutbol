@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Equipos 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style_equipos.css' %}" />
+  </head>
+  <body>
+    <!-- Botón de Volver -->
+    <a href="{% url 'index' %}" class="volver-boton">Volver</a>
+    <header id="titulo">
+      <div>
+        <h1>Equipos Participantes</h1>
+      </div>
+    </header>
+
+    <section class="container">
+      {% for equipo in equipos %}
+      <article class="post">
+        <h2>{{ equipo.name }}</h2>
+        <p>Bandera:</p>
+        <img src="/media/{{ equipo.bandera }}" width="250" />
+        <p>Escudo:</p>
+        <img src="/media/{{equipo.escudo}}" width="250" />
+      </article>
+      {% endfor %}
+      <article class="post">
+        <h2>Argentina</h2>
+        <p>Bandera:</p>
+        <img
+          src="{% static 'images/equipos/bandera_argentina.png' %}"
+          width="250"
+        />
+        <p>Escudo:</p>
+        <img
+          src="{% static 'images/equipos/escudo_argentina.png' %}"
+          width="250"
+        />
+      </article>
+      <article class="post">
+        <h2>Colombia</h2>
+        <p>Bandera:</p>
+        <img
+          src="{% static 'images/equipos/bandera_colombia.png' %}"
+          width="250"
+        />
+        <p>Escudo:</p>
+        <img
+          src="{% static 'images/equipos/escudo_colombia.jpg' %}"
+          width="250"
+        />
+      </article>
+      <article class="post">
+        <h2>Perú</h2>
+        <p>Bandera:</p>
+        <img src="{% static 'images/equipos/bandera_peru.png' %}" width="250" />
+        <p>Escudo:</p>
+        <img src="{% static 'images/equipos/escudo_peru.png' %}" width="250" />
+      </article>
+      <article class="post">
+        <h2>Chile</h2>
+        <p>Bandera:</p>
+        <img
+          src="{% static 'images/equipos/bandera_chile.png' %}"
+          width="250"
+        />
+        <p>Escudo:</p>
+        <img src="{% static 'images/equipos/escudo_chile.png' %}" width="250" />
+      </article>
+    </section>
+    <footer>
+      <section>
+        <a href="#titulo">Ir al comienzo</a>
+        <a href="mailto:mike@gmail.com">contáctame aquí</a>
+      </section>
+      <p>Copyring 2024</p>
+    </footer>
+  </body>
+</html>

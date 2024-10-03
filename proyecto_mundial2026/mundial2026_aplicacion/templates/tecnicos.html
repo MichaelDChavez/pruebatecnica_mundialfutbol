@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Directores Técnicos 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style_jugadores.css' %}" />
+  </head>
+  <body>
+    <!-- Botón de Volver -->
+    <a href="{% url 'index' %}" class="volver-boton">Volver</a>
+    <header id="titulo">
+      <div>
+        <h1>Directores Técnicos</h1>
+      </div>
+    </header>
+
+    <section class="container">
+      <article class="post">
+        <h2>Puesto No. 1</h2>
+        <p>Nombre: Néstor Gabriel</p>
+        <p>Apellido: Lorenzo</p>
+        <p>Foto:</p>
+        <img
+          src="{% static 'images/tecnicos/Néstor_Lorenzo.jpg' %}"
+          width="140"
+        />
+        <p>Fecha de Nacimiento: 28 de febrero de 1966 (58 años)</p>
+        <p>Rol: Director técnico</p>
+        <p>Selección: Colombia</p>
+        <p>Nacionalidad: Argentina</p>
+      </article>
+      <article class="post">
+        <h2>Puesto No. 2</h2>
+        <p>Nombre: Jorge Daniel</p>
+        <p>Apellido: Fossati Lurachi</p>
+        <p>Foto:</p>
+        <img src="{% static 'images/tecnicos/fossati.jpg' %}" width="140" />
+        <p>Fecha de Nacimiento: 22 de noviembre de 1952 (71 años)</p>
+        <p>Rol: Director técnico</p>
+        <p>Selección: Perú</p>
+        <p>Nacionalidad: Uruguaya, Italiana</p>
+      </article>
+      <article class="post">
+        <h2>Puesto No. 3</h2>
+        <p>Nombre: Lionel Sebastián</p>
+        <p>Apellido: Scaloni</p>
+        <p>Foto:</p>
+        <img src="{% static 'images/tecnicos/Scaloni.jpg' %}" width="250" />
+        <p>Fecha de Nacimiento: 16 de mayo de 1978 (46 años)</p>
+        <p>Rol: Director técnico</p>
+        <p>Selección: Argentina</p>
+        <p>Nacionalidad: Argentina</p>
+      </article>
+      {% for tecnico in tecnicos %}
+      <article class="post">
+        <p>Nombre: {{ tecnico.name }}</p>
+        <p>Apellido: {{ tecnico.lastname }}</p>
+        <p>Foto:</p>
+        <img src="/media/{{ tecnico.picture }}" width="250" />
+        <p>Fecha de Nacimiento: {{ tecnico.birthday }}</p>
+        <p>Rol: {{ tecnico.rol }}</p>
+        <p>
+          Selección: {% for equipo in tecnico.seleccion.all %}
+          <span>{{ equipo.name }}</span>{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </p>
+        <p>Nacionalidad: {{ tecnico.nacionalidad }}</p>
+      </article>
+      {% endfor %}
+    </section>
+    <footer>
+      <section>
+        <a href="#titulo">Ir al comienzo</a>
+        <a href="mailto:mike@gmail.com">contáctame aquí</a>
+      </section>
+      <p>Copyring 2024</p>
+    </footer>
+  </body>
+</html>

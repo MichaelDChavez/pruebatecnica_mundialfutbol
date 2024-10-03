@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario Mundial 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_calendario.css' %}" />
+  </head>
+  <body>
+    <!-- Botón de Volver -->
+    <a href="{% url 'index' %}" class="volver-boton">Volver</a>
+    <header class="header">
+      <h1>Calendario Mundial 2026</h1>
+    </header>
+
+    <img
+      src="{% static 'images/calendario2.png' %}"
+      alt="Descripción de la nueva imagen"
+      class="imagen-calendario"
+    />
+  </body>
+</html>

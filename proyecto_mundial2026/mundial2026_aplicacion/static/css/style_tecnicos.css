@@ -1,0 +1,103 @@
+html{  
+    font-family: "SUSE", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin:0;
+    background-color: #adb1b3;
+}
+
+
+
+header{
+    background: rgb(101, 105, 105) url('../images/fondo-fifa2.jpg') no-repeat bottom / 1400px 220px;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+/* Estilo del botón "Volver" */
+.volver-boton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ccc;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+header h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+section article{
+    transition: all 0.3s ease;
+    background-color: #868b8b;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+    text-align: center;
+}
+section article:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+}
+
+section article h2, section article p{
+    margin: 1rem;
+}
+.boton {
+    background-color: white; /* Color de fondo */
+    color:  black; /* Color del texto */
+    padding: 5px 12px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: none; /* Sin borde */
+    border-radius: 12px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar por encima */
+    transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+    float:right;
+}
+
+/* Estilo al pasar el cursor sobre el botón */
+.boton:hover {
+    background-color: #45a049; /* Cambia el color de fondo cuando se pasa el cursor */
+}
+
+footer{
+    background-color: #222;
+    padding: 3rem;
+    color: white;
+}
+
+footer section{
+    float:right;
+}
+footer p{
+    margin: 0;
+}
+
+footer a{
+    transition: 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color: cornflowerblue;
+
+}

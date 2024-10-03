@@ -1,0 +1,118 @@
+html {
+  font-family: "SUSE", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #adb1b3;
+}
+
+header {
+  background: rgb(101, 105, 105) url("../images/fondo-fifa2.jpg") no-repeat
+    bottom / 1400px 220px;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+button {
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  padding: 0.5rem 1rem;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+.perfil {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.perfil h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.campo {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.boton-container {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.boton-sesion {
+  background-color: #4c4d4c; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 16px; /* Espaciado interno */
+  text-align: center; /* Centrar texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  border: none; /* Sin borde */
+  border-radius: 12px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambiar el cursor a una mano al pasar por encima */
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+}
+.boton-sesion {
+  background-color: #45a049; /* Cambia el color de fondo cuando se pasa el cursor */
+}
+
+.tabla-goles {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tabla-goles h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+input[type="number"] {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Enlace al archivo CSS externo -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_registro.css' %}" />
+  </head>
+  <body>
+    <a href="{% url 'index' %}" class="volver-boton">Volver</a>
+    <div class="container">
+      <h2>Registro de Usuario</h2>
+
+      <form method="post" id="registroForm">
+        {% csrf_token %} {{ form.as_p }}
+
+        <label>
+          <input type="checkbox" id="terminos" required />
+          Acepto los términos y condiciones
+        </label>
+
+        <button type="submit" class="boton">Registrarse</button>
+      </form>
+    </div>
+  </body>
+</html>

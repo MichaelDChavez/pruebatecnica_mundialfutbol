@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundial FIFA 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <!-- Carga la librería estática -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <!-- Enlaza tu archivo CSS -->
+  </head>
+  <body>
+    <header id="titulo">
+      <div>
+        <!-- <a href="{% url 'login' %}" class="boton">Login</a>
+        <a href="{% url 'registro' %}" class="boton">Registro</a> -->
+        <a href="{% url 'logout' %}" class="boton">Cerrar Sesión</a>
+        <h1>Mundial de la FIFA México/Estados Unidos/Canadá 2026</h1>
+      </div>
+    </header>
+    <section class="container">
+      <article class="post">
+        <h2>Calendario</h2>
+        <p>Entra y mira las fechas de los encuentros</p>
+        <img src="{% static 'images/calendario.jpg' %}" width="300" />
+        <br />
+        <a href="{% url 'calendario' %}" class="mi-boton">Haz clic aquí</a>
+      </article>
+      <article class="post">
+        <h2>Equipos</h2>
+        <p>Descubre los equipos participantes</p>
+        <img src="{% static 'images/equipos.jpg' %}" width="300" />
+        <br />
+        <a href="{% url 'equipos' %}" class="mi-boton">Haz clic aquí</a>
+      </article>
+      <article class="post">
+        <h2>Jugadores</h2>
+        <p>Sigue tus estrellas favoritas</p>
+        <img src="{% static 'images/jugadores.jpg' %}" width="300" />
+        <br />
+        <a href="{% url 'jugadores' %}" class="mi-boton">Haz clic aquí</a>
+      </article>
+      <article class="post">
+        <h2>Entrenadores</h2>
+        <p>Sigue tus técnicos favoritos</p>
+        <img
+          src="{% static 'images/entrenadores.jpg' %}"
+          width="300"
+          height="200"
+        />
+        <br />
+        <a href="{% url 'tecnicos' %}" class="mi-boton">Haz clic aquí</a>
+      </article>
+    </section>
+    <footer>
+      <section>
+        <a href="#titulo">Ir al comienzo</a>
+        <a href="mailto:mike@gmail.com">contáctame aquí</a>
+      </section>
+      <p>Copyright 2024</p>
+    </footer>
+  </body>
+</html>
+
+<!-- 
+<header se usa para agrupar links>
+<footer> es utiliza para agrupar píes de página, tiene informacion del sitio.
+<section> nos sirve para definir secciones. en ellas colocamos la etiquetas que necitemos
+<article> sirve para defionir contenido independiente, titulos, imagenes, parrafos, redes sociales...  
+<div> se utiliza para dividir nuestro contenido al igual que section y agrupar en secciones
+ no anidar div dentro de div, es mejor eliminarlos dejando 1
+ id= es para asignar atributos, no se deben repetir
+ class= si quiero que se repita, uso el atriubuto class para seleccionar mas de un elemento 
+Class lo podemos seleccionar con los selectores en CSS y JS
+<a href=""> nos permite referenciar puntos especificos de la página, o referencia de páginas
+-->

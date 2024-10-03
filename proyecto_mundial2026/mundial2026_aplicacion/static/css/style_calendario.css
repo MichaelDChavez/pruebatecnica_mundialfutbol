@@ -1,0 +1,47 @@
+html{  
+    font-family: "SUSE", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin:0;
+    background-color: #adb1b3;
+}
+/* Estilo del botón "Volver" */
+.volver-boton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ccc;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+header{
+    background: rgb(101, 105, 105) url('../images/fondo-fifa2.jpg') no-repeat bottom / 1400px 220px;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.imagen-calendario {
+    width: 1340px; /* Cambiado a 50% */
+    height: 500px; /* Mantener la proporción de aspecto */
+    max-width: 2000px; /* Cambiado a 400px */
+    border: 2px solid #ccc; /* Borde opcional */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+
+}

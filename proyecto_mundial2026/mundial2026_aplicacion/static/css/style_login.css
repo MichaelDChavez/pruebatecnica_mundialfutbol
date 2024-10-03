@@ -1,0 +1,99 @@
+/* Estilos generales con imagen de fondo */
+body {
+  font-family: "SUSE", sans-serif;
+  margin: 0;
+  height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la ventana */
+  background: url("../images/fondo-fifa2.jpg") no-repeat center center fixed; /* Imagen de fondo */
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Estilo del botón "Volver" */
+.volver-boton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #ccc;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.volver-boton:hover {
+  background-color: #45a049;
+}
+/* Contenedor del formulario */
+.login-container {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Fondo blanco semitransparente */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Título del formulario */
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Estilos de los inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Enlace "Olvidaste tu contraseña" */
+.forgot-password {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Estilo de la casilla de verificación */
+.terms {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Estilo del botón de Iniciar Sesión */
+button {
+  width: 100%;
+  background-color: #707270;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

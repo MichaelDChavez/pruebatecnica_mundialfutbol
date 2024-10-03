@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jugadores 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style_jugadores.css' %}" />
+  </head>
+  <body>
+    <!-- Botón de Volver -->
+    <a href="{% url 'index' %}" class="volver-boton">Volver</a>
+    <header id="titulo">
+      <div>
+        <h1>Jugadores Destacados</h1>
+      </div>
+    </header>
+
+    <section class="container">
+      <article class="post">
+        <h2>Puesto No. 1</h2>
+        <p>Nombre: James David</p>
+        <p>Apellido: Rodríguez Rubio</p>
+        <p>Foto:</p>
+        <img src="{% static 'images/jugadores/james.jpg' %}" width="250" />
+        <p>Fecha de Nacimiento: 12 de julio de 1991 (33 años)</p>
+        <p>Posición de juego: Centrocampista</p>
+        <p>Número de camiseta: 10</p>
+        <p>¿Es titular?: Sí</p>
+        <p>Equipo al que pertenece: Colombia</p>
+      </article>
+      <article class="post">
+        <h2>Puesto No. 2</h2>
+        <p>Nombre: Dávinson</p>
+        <p>Apellido: Sánchez Quintero</p>
+        <p>Foto:</p>
+        <img src="{% static 'images/jugadores/davinson.jpg' %}" width="140" />
+        <p>Fecha de Nacimiento: 12 de junio de 1996 (28 años)</p>
+        <p>Posición de juego: Defensa central</p>
+        <p>Número de camiseta: 23</p>
+        <p>¿Es titular?: Sí</p>
+        <p>Equipo al que pertenece: Colombia</p>
+      </article>
+      <article class="post">
+        <h2>Puesto No. 3</h2>
+        <p>Nombre: Daniel</p>
+        <p>Apellido: Muñoz Chitiva</p>
+        <p>Foto:</p>
+        <img src="{% static 'images/jugadores/muñoz.jpg' %}" width="250" />
+        <p>Fecha de Nacimiento: 26 de mayo de 1996 (28 años)</p>
+        <p>Posición de juego: Defensa</p>
+        <p>Número de camiseta: 21</p>
+        <p>¿Es titular?: Sí</p>
+        <p>Equipo al que pertenece: Colombia</p>
+      </article>
+      <article class="post">
+        <h2>Puesto No. 4</h2>
+        <p>Nombre: Lionel Andrés</p>
+        <p>Apellido: Messi Cuccittini</p>
+        <p>Foto:</p>
+        <img src="{% static 'images/jugadores/messi.jpg' %}" width="170" />
+        <p>Fecha de Nacimiento: 24 de junio de 1987 (37 años)</p>
+        <p>Posición de juego: Delantero</p>
+        <p>Número de camiseta: 10</p>
+        <p>¿Es titular?: Sí</p>
+        <p>Equipo al que pertenece: Argentina</p>
+      </article>
+      {% for jugador in jugadores %}
+      <article class="post">
+        <p>Nombre: {{ jugador.name }}</p>
+        <p>Apellido: {{ jugador.lastname }}</p>
+        <p>Foto:</p>
+        <img src="/media/{{ jugador.picture }}" width="170" />
+        <p>Fecha de Nacimiento: {{ jugador.birthday }}</p>
+        <p>Posición de juego: {{ jugador.position }}</p>
+        <p>Número de camiseta: {{ jugador.number }}</p>
+        <p>¿Es titular?: {{ jugador.titular|yesno:"Sí,No" }}</p>
+        <p>Equipo al que pertenece: {{ jugador.team }}</p>
+      </article>
+      {% endfor %}
+    </section>
+    <footer>
+      <section>
+        <a href="#titulo">Ir al comienzo</a>
+        <a href="mailto:mike@gmail.com">contáctame aquí</a>
+      </section>
+      <p>Copyring 2024</p>
+    </footer>
+  </body>
+</html>
